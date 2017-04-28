@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+.container {
+    margin: 50px auto;
+    width: 85%;
+}
+
+#month-banner {
+    text-align: center;
+    border-bottom: solid 2px black;
+    margin: 0 20px;
+}
+
+.day-banner {
+    margin-top: 20px;
+    display: flex;
+}
+
+#month-name {
+    font-size: 2em;
+}
+
+.day-banner h3 {
+    font-size: 0.85em;
+    display: inline-block;
+    margin: 0;
+    padding: 5px 20px;
+    text-align: center;
+    flex: 1 0 auto;
+    height: auto;
+    width: calc(100% / 7);
+}
+
+.calendar {
+    width: 60%;
+    float: right;
+}
+
+.todo {
+    margin-top: 20px;
+    text-align: center;
+    width: 40%;
+    float: left;
+}
+
+#days {
+    display: flex;
+    flex-direction: column;
+}
+
+.week {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    justify-content: space-around
+}
+
+.day {
+    background: tomato;
+    margin: 0;
+    border: solid 5px white;
+    text-align: center;
+    flex: 1 0 auto;
+    height: auto;
+    width: calc(100% / 7);
+}
+
+.day p {
+    font-size: 1em;
+    color: white;
+}
+
+.day:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+
+.day:hover {
+    background: coral;
+}
