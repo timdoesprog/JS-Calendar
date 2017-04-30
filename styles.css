@@ -39,7 +39,7 @@
     float: right;
 }
 
-.todo {
+#todo {
     margin-top: 20px;
     text-align: center;
     width: 40%;
@@ -87,4 +87,50 @@
 
 .day:hover {
     background: coral;
+}
+
+#todo-list {
+    margin-top: 20px;
+    margin-right: 25px;
+    list-style: none;
+    padding: 0;
+}
+
+#task-input {
+    width: 70%;
+    float: left;
+    font-size: 1em;
+}
+
+#add-task {
+    width: 20%;
+    font-size: 1em;
+    background: tomato;
+    color: white;
+}
+
+#todo-list li {
+    margin: 5px 0;
+    background: tomato;
+    height: 35px;
+    width: 100%;
+    padding: 5px 0;
+}
+
+#todo-list li:hover {
+    background: coral;
+}
+
+.remove {
+    background: white;
+    color: tomato;
+    border: none;
+    float: right;
+    margin-bottom: 7px 7px;
+    padding: 5px;
+}
+
+li span {
+    color: white;
+    margin-bottom: 5px;
 }
