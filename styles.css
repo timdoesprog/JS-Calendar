@@ -1,50 +1,16 @@
+/**************************************
+GENERAL STYLING
+**************************************/
+
 * {
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
 }
 
-.container {
-    margin: 50px auto;
-    width: 85%;
-}
 
-#month-banner {
-    text-align: center;
-    border-bottom: solid 2px black;
-    margin: 0 20px;
-}
-
-.day-banner {
-    margin-top: 20px;
-    display: flex;
-}
-
-#month-name {
-    font-size: 2em;
-}
-
-.day-banner h3 {
-    font-size: 0.85em;
-    display: inline-block;
-    margin: 0;
-    padding: 5px 20px;
-    text-align: center;
-    flex: 1 0 auto;
-    height: auto;
-    width: calc(100% / 7);
-}
-
-.calendar {
-    width: 60%;
-    float: right;
-}
-
-#todo {
-    margin-top: 20px;
-    text-align: center;
-    width: 40%;
-    float: left;
-}
+/**************************************
+CALENDAR CARDS
+**************************************/
 
 #days {
     display: flex;
@@ -87,6 +53,69 @@
 
 .day:hover {
     background: coral;
+}
+
+
+
+
+
+/**************************************
+BANNERS
+**************************************/
+
+#month-banner {
+    text-align: center;
+    border-bottom: solid 2px black;
+    margin: 0 20px;
+}
+
+#month-name {
+    display: inline-block;
+}
+
+.arrow {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 2em;
+    display: inline-block;
+    margin: 0 150px;
+    cursor: pointer;
+}
+
+
+#month-name {
+    font-size: 2em;
+}
+
+.day-banner {
+    margin-top: 20px;
+    display: flex;
+}
+
+.day-banner h3 {
+    font-size: 0.85em;
+    display: inline-block;
+    margin: 0;
+    padding: 5px 20px;
+    text-align: center;
+    flex: 1 0 auto;
+    height: auto;
+    width: calc(100% / 7);
+}
+
+
+
+
+/**************************************
+todo-LIST
+**************************************/
+
+#todo {
+    margin-top: 20px;
+    text-align: center;
+    width: 40%;
+    float: left;
 }
 
 #todo-list {
@@ -133,4 +162,20 @@
 li span {
     color: white;
     margin-bottom: 5px;
+}
+
+
+
+/**************************************
+CONTAINER
+**************************************/
+
+.container {
+    margin: 50px auto;
+    width: 85%;
+}
+
+.calendar {
+    width: 60%;
+    float: right;
 }
