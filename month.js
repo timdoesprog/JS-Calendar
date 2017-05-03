@@ -27,6 +27,7 @@ function Month(year, month) {
     this.date = new Date(year, month);
     this.name = monthNames[this.date.getMonth()];
     this.days = [];
+    // get max days of the month
     this.MAXDAYS = new Date(year, month + 1, 0).getDate();
     // need to subtract one because date.getDay returns 0 for sunday
     this.currentWeekDay = this.date.getDay() - 1;
@@ -52,14 +53,14 @@ Month.prototype.renderCalendar = function() {
     // populate the dayCards with the right number
     let dayNumber = 1;
     for (let i = 0; i < dayCards.length; i++) {
-        dayCards[i].style.background = "tomato";
-        dayCards[i].firstChild.textContent = "";
         if (i >= startDay && dayNumber <= this.MAXDAYS) {
+            dayCards[i].className = "day";
             dayCards[i].firstChild.textContent = dayNumber;
             dayNumber++;
         } else {
-            // make the unused cards a lighter shade of color
-            dayCards[i].style.background = "rgba(255, 99, 71, .75)";
+            // make the unused cards a lighter shade of color and reset text
+            dayCards[i].className = "day unused";
+            dayCards[i].firstChild.textContent = "";
         }
     }
 }

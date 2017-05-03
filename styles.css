@@ -40,6 +40,10 @@ CALENDAR CARDS
     width: calc(100% / 7);
 }
 
+.unused {
+    background: rgba(255, 99, 71, .75);
+}
+
 .day p {
     font-size: 1em;
     color: white;
