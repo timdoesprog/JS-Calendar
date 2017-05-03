@@ -52,14 +52,15 @@ Month.prototype.renderCalendar = function() {
     // populate the dayCards with the right number
     let dayNumber = 1;
     for (let i = 0; i < dayCards.length; i++) {
-        dayCards[i].style.background = "tomato";
+        // reset the day cards with styling class and text content
         dayCards[i].firstChild.textContent = "";
         if (i >= startDay && dayNumber <= this.MAXDAYS) {
+            dayCards[i].className = "day";
             dayCards[i].firstChild.textContent = dayNumber;
             dayNumber++;
         } else {
             // make the unused cards a lighter shade of color
-            dayCards[i].style.background = "rgba(255, 99, 71, .75)";
+            dayCards[i].className = "day-unused";
         }
     }
 }
