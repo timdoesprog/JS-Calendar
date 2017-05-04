@@ -1,7 +1,7 @@
+const divDays = document.getElementById("days");
 const calendar = new Calendar(2017, 4);
 calendar.renderTemplate();
 
-const divDays = document.getElementById("days");
 const addTaskButton = document.getElementById("add-task");
 const todoList = document.getElementById("todo-list");
 const nextMonthButton = document.getElementById("next-month");
@@ -45,3 +45,18 @@ nextMonthButton.addEventListener("click", function() {
 previousMonthButton.addEventListener("click", function() {
     calendar.previousMonth();
 });
+
+
+function fadeIn(element) {
+    let opacity = 0.0;
+    let timer = setInterval(function() {
+        if (opacity >= 0.9) {
+            clearInterval(timer);
+            element.style.display = "block";
+        } else {
+            element.style.opacity = opacity;
+            element.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+            opacity += 0.1;
+        }
+    }, 100);
+}

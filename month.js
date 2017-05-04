@@ -43,6 +43,7 @@ function Month(year, month) {
 }
 
 Month.prototype.renderCalendar = function() {
+    fadeIn(divDays);
     // need to subtract one because date.getDay returns 0 for sunday
     let startDay = this.date.getDay() - 1;
     // work around for the sunday case where currentWeekDay becomes -1
