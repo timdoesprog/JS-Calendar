@@ -1,6 +1,5 @@
 const divDays = document.getElementById("days");
 const calendar = new Calendar(2017, 0);
-calendar.renderTemplate();
 
 const addTaskButton = document.getElementById("add-task");
 const todoList = document.getElementById("todo-list");
@@ -25,6 +24,7 @@ addTaskButton.addEventListener("click", () => {
     const inputField = document.getElementById("task-input");
     const task = inputField.value;
     inputField.value = "";
+    inputField.focus();
     calendar.currentMonth.currentDay.addTask(task);
     calendar.currentMonth.currentDay.getHTML();
 });
@@ -56,7 +56,7 @@ function fadeIn(element) {
         } else {
             element.style.opacity = opacity;
             element.style.filter = "alpha(opacity=" + opacity * 100 + ")";
-            opacity += 0.1;
+            opacity += 0.15;
         }
     }, 100);
 }

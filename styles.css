@@ -74,6 +74,8 @@ BANNERS
 }
 
 #month-name {
+    width: 50%;
+    text-align: center;
     display: inline-block;
 }
 
@@ -83,7 +85,7 @@ BANNERS
     border: none;
     font-size: 2em;
     display: inline-block;
-    margin: 0 150px;
+    margin: 0 20px;
     cursor: pointer;
 }
 
@@ -175,7 +177,7 @@ CONTAINER
 **************************************/
 
 .container {
-    margin: 50px auto;
+    margin: 0 auto;
     width: 85%;
 }
 

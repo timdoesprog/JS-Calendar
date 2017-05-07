@@ -24,6 +24,7 @@ function Month(year, month) {
         "December"
     ];
 
+    this.year = year;
     this.date = new Date(year, month);
     this.name = monthNames[this.date.getMonth()];
     this.days = [];
@@ -39,8 +40,7 @@ function Month(year, month) {
         this.days[i] = new Day(weekDays[this.currentWeekDay % 7], i + 1);
         this.currentWeekDay++;
     }
-    const currentDate = new Date();
-    this.currentDay = this.days[currentDate.getDate() - 1];
+    this.currentDay = this.days[0];
 }
 
 Month.prototype.renderCalendar = function() {
