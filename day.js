@@ -13,6 +13,7 @@ Day.prototype.getHTML = function() {
     } else {
         list.innerHTML = "";
     }
+
     for (let i = 0; i < this.tasks.length; i++) {
         list.appendChild(this.tasks[i]);
     }

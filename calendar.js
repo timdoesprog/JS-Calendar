@@ -22,25 +22,11 @@ Calendar.prototype.nextMonth = function() {
 Calendar.prototype.previousMonth = function() {
     let index = this.months.indexOf(this.currentMonth);
     if (index <= 0) {
-        this.months = this.createYear(this.year - 1);
+        return false;
     }
     this.currentMonth = this.months[index - 1];
     this.renderTemplate();
     return true;
-}
-
-Calendar.prototype.createYear = function(year) {
-    let newMonths = [];
-    let month = 0;
-    while (month < 12) {
-        newMonths.push(new Month(year, month));
-        month++;
-    }
-    if (year < this.year) {
-        return newMonths.concat(this.months);
-    } else {
-        return this.months.concat(newMonths);
-    }
 }
 
 Calendar.prototype.renderTemplate = function() {
