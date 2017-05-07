@@ -39,10 +39,12 @@ function Month(year, month) {
         this.days[i] = new Day(weekDays[this.currentWeekDay % 7], i + 1);
         this.currentWeekDay++;
     }
-    this.currentDay = this.days[0];
+    const currentDate = new Date();
+    this.currentDay = this.days[currentDate.getDate() - 1];
 }
 
 Month.prototype.renderCalendar = function() {
+    divDays.style.opacity = 0.0;
     fadeIn(divDays);
     // need to subtract one because date.getDay returns 0 for sunday
     let startDay = this.date.getDay() - 1;

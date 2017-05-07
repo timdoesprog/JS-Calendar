@@ -5,7 +5,8 @@ function Calendar(year, month) {
         this.months.push(new Month(year, month));
         month++;
     }
-    this.currentMonth = this.months[0];
+    const currentDate = new Date();
+    this.currentMonth = this.months[currentDate.getMonth()];
 }
 
 Calendar.prototype.nextMonth = function() {

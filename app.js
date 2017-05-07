@@ -1,5 +1,5 @@
 const divDays = document.getElementById("days");
-const calendar = new Calendar(2017, 4);
+const calendar = new Calendar(2017, 0);
 calendar.renderTemplate();
 
 const addTaskButton = document.getElementById("add-task");
