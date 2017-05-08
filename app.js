@@ -1,4 +1,5 @@
 const divDays = document.getElementById("days");
+const todoContainer = document.getElementById("todo");
 const calendar = new Calendar(2017, 0);
 
 const addTaskButton = document.getElementById("add-task");
@@ -15,7 +16,8 @@ divDays.addEventListener("click", (e) => {
         todoHeadline.textContent = weekday + " - " +
                 calendar.currentMonth.name +
                 " " + (index + 1);
-        calendar.currentMonth.currentDay.getHTML();
+        const taskList = calendar.currentMonth.currentDay.getHTML();
+        todoContainer.appendChild(taskList);
     }
 });
 
@@ -26,7 +28,8 @@ addTaskButton.addEventListener("click", () => {
     inputField.value = "";
     inputField.focus();
     calendar.currentMonth.currentDay.addTask(task);
-    calendar.currentMonth.currentDay.getHTML();
+    const taskList = calendar.currentMonth.currentDay.getHTML();
+    todoContainer.appendChild(taskList);
 });
 
 

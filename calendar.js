@@ -13,7 +13,8 @@ function Calendar(year, month) {
     todoHeadline.textContent = this.currentMonth.currentDay.weekday + " - " +
                                 this.currentMonth.name + " " +
                                 this.currentMonth.currentDay.date;
-    this.currentMonth.currentDay.getHTML();
+    const taskList = this.currentMonth.currentDay.getHTML();
+    todoContainer.appendChild(taskList);
     this.renderTemplate();
 }
 

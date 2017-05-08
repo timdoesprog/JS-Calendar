@@ -5,8 +5,7 @@ function Day(weekday, date) {
 }
 
 Day.prototype.getHTML = function() {
-    const container = document.getElementById("todo");
-    let list = container.querySelector("ul");
+    let list = todoContainer.querySelector("ul");
     if (!list) {
         list = document.createElement("ul");
         list.id = "todo-list";
@@ -17,7 +16,7 @@ Day.prototype.getHTML = function() {
     for (let i = 0; i < this.tasks.length; i++) {
         list.appendChild(this.tasks[i]);
     }
-    container.appendChild(list);
+    return list;
 }
 
 
